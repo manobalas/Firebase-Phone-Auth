@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>firebase phone number auth</title>
+    <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
+    <script>
+
+        var config = {
+            apiKey: "AIzaSyBadliyT72th1p2yerkWJ4w5Nr-DXpfU7U",
+            authDomain: "db-with-js-and-jq.firebaseapp.com",
+            databaseURL: "https://db-with-js-and-jq.firebaseio.com",
+            projectId: "db-with-js-and-jq",
+            storageBucket: "db-with-js-and-jq.appspot.com",
+            messagingSenderId: "575232522179"
+        };
+
+        firebase.initializeApp(config);
+
+    </script>
+</head>
+<body>
+    <div class="row">
+        <div class="col s12 m3">
+            <div class="card-panel">
+                <h5>Verify Mobile Number</h5>
+                <div class="input-field">
+                    <input id="mobno" type="text" class="validate">
+                    <label for="mobno">Mobile Number</label>
+                </div>
+                <button style="text-transform: none" onclick="auth()" class="btn waves-effect waves-light cyan" type="submit" name="action">
+                    Verify
+                </button>
+                <div id="recaptcha"></div>
+                <p>Verification Status: </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
